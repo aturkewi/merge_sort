@@ -22,4 +22,12 @@ describe 'merge_sort' do
       expect(merge_sort(shuffle_array)).to eq(sorted_array)
   end
 
+  it 'sorts array of length 1' do
+    expect(merge_sort([1])).to eq([1])
+  end
+
+  it 'sorts array of length 2' do
+    expect(merge_sort([2,1])).to eq([1,2])
+  end
+
 end
