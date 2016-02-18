@@ -16,7 +16,7 @@ class MergeSort2
     data.shift
   end
 
-  def merge(array1, array2)
+  def merge_elements(array1, array2)
     return array1 unless array2
     new_array = []
     while array1.length > 0 && array2.length > 0
@@ -32,7 +32,8 @@ class MergeSort2
   def merge_layer
     next_level_data = []
     while data.length >= 2
-      next_level_data << merge(get_first_from_data, get_first_from_data)
+      binding.pry
+      next_level_data << merge_elements(get_first_from_data, get_first_from_data)
     end
     @data = next_level_data
   end
